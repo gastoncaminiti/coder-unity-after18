@@ -458,8 +458,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: -0.32886747, y: -0.005076885, z: 0.0018507537, w: -0.9443607}
-  m_LocalPosition: {x: 16.065464, y: 17.906166, z: -45.054245}
+  m_LocalRotation: {x: -0.34721822, y: 0.004805972, z: -0.0016952959, w: -0.9377705}
+  m_LocalPosition: {x: 1.3455305, y: 21.061226, z: -37.6736}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -817,7 +817,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1237955040}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1275778054}
+        m_TargetAssemblyTypeName: GroupController, Assembly-CSharp
+        m_MethodName: CreatePlayerUnit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1237955040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -975,8 +987,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f22721fdd3ff64408aa4a90440c91f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitsPlayer: []
+  unitsPlayer:
+  - {fileID: 1454215774}
   unitsEnemy: []
+  playerResource: 0
+  minSecond: 3
+  maxSecond: 6
+--- !u!1 &1454215774 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7247390907833242305, guid: 5d242e09ce3b7b8468faf0de04b0b70b, type: 3}
+  m_PrefabInstance: {fileID: 7247390907121942687}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1785186914
 GameObject:
   m_ObjectHideFlags: 0
@@ -1128,9 +1149,10 @@ GameObject:
   - component: {fileID: 1907856221}
   - component: {fileID: 1907856220}
   - component: {fileID: 1907856219}
+  - component: {fileID: 1907856223}
   m_Layer: 0
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1212,6 +1234,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1907856223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1907856218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b491a738247fc4a8c8e87e17e8cf04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1934451854
 GameObject:
   m_ObjectHideFlags: 0
